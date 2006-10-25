@@ -1,6 +1,7 @@
 package DateTime::Span::Birth;
 
 use strict;
+use base qw( DateTime::Span );
 our $VERSION = '0.01';
 
 use Carp;
@@ -22,7 +23,7 @@ sub new {
         croak "DateTime::Span::Birth->new() requires from, to or age parameter";
     }
 
-    return DateTime::Span->from_datetimes( start => $dates[0], end => $dates[1] );
+    return $class->from_datetimes( start => $dates[0], end => $dates[1] );
 }
 
 sub _from_array {
@@ -46,7 +47,7 @@ sub _from_age {
 1;
 __END__
 
-=for stopwords SQL
+=for stopwords SQL datetime
 
 =head1 NAME
 
@@ -69,7 +70,7 @@ DateTime::Span::Birth - Date span of birthdays for an age
 
 DateTime::Span::Birth is a port of Date::Range::Birth module and works
 with DateTime::Span object. This module allows you to say "who is now
-28 years old, based on thier bitrhday dates?"
+28 years old, based on their birthday dates?"
 
 This would be particularly useful when you build an SQL query to, say,
 select teenagers from your customers database which has 'birthday'
