@@ -67,12 +67,13 @@ DateTime::Span::Birth - Date span of birthdays for an age
 
 =head1 DESCRIPTION
 
-DateTime::Span::Birth is a port of Date::Range::Birth module which
-works with Date::Simple. This module allows you to say "what's the
-span of birthday dates for people who is 28 years old?"
+DateTime::Span::Birth is a port of Date::Range::Birth module and works
+with DateTime::Span object. This module allows you to say "who is now
+28 years old, based on thier bitrhday dates?"
 
 This would be particularly useful when you build an SQL query to, say,
-select teenagers from your customers database.
+select teenagers from your customers database which has 'birthday'
+datetime column.
 
 =head1 AUTHOR
 
