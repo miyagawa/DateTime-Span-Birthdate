@@ -1,6 +1,6 @@
 use strict;
 use t::TestBase;
-use DateTime::Span::Birth;
+use DateTime::Span::Birthdate;
 
 plan tests => 1 * blocks;
 
@@ -8,9 +8,9 @@ run {
     my $block = shift;
     eval {
         my $span =
-            $block->age  ? DateTime::Span::Birth->new(age => $block->age, on => $block->on)
-          : $block->from ? DateTime::Span::Birth->new(from => $block->from, to => $block->to, on => $block->on)
-          :                DateTime::Span::Birth->new(on => $block->on);
+            $block->age  ? DateTime::Span::Birthdate->new(age => $block->age, on => $block->on)
+          : $block->from ? DateTime::Span::Birthdate->new(from => $block->from, to => $block->to, on => $block->on)
+          :                DateTime::Span::Birthdate->new(on => $block->on);
     };
     like $@, $block->expected;
 };

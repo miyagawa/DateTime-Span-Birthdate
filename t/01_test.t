@@ -1,13 +1,13 @@
 use strict;
 use t::TestBase;
-use DateTime::Span::Birth;
+use DateTime::Span::Birthdate;
 plan tests => 2 * blocks;
 
 run {
     my $block = shift;
     my $span = $block->age
-        ? DateTime::Span::Birth->new(age => $block->age, on => $block->on)
-        : DateTime::Span::Birth->new(from => $block->from, to => $block->to, on => $block->on);
+        ? DateTime::Span::Birthdate->new(age => $block->age, on => $block->on)
+        : DateTime::Span::Birthdate->new(from => $block->from, to => $block->to, on => $block->on);
     is $span->start, $block->start;
     is $span->end, $block->end;
 };

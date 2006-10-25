@@ -1,4 +1,8 @@
-Revision history for Perl extension DateTime::Span::Birth
+Revision history for Perl extension DateTime::Span::Birthdate
+
+  0.02  Thu Oct 26 02:52:44 JST 2006
+        - Make it a subclass of DateTime::Span actually
+        - renamed the module to ::Birthdate per Dave Rolsky
 
   0.01  Thu Oct 26 00:08:56 2006
         - original version

@@ -1,11 +1,11 @@
-This is Perl module DateTime::Span::Birth.
+This is Perl module DateTime::Span::Birthdate.
 
 INSTALLATION
 
-DateTime::Span::Birth installation is straightforward. If your CPAN shell is set up,
+DateTime::Span::Birthdate installation is straightforward. If your CPAN shell is set up,
 you should just be able to do
 
-    % cpan DateTime::Span::Birth
+    % cpan DateTime::Span::Birthdate
 
 Download it, unpack it, then build it as per the usual:
 
@@ -18,9 +18,9 @@ Then install it:
 
 DOCUMENTATION
 
-DateTime::Span::Birth documentation is available as in POD. So you can do:
+DateTime::Span::Birthdate documentation is available as in POD. So you can do:
 
-    % perldoc DateTime::Span::Birth
+    % perldoc DateTime::Span::Birthdate
 
 to read the documentation online with your favorite pager.
 

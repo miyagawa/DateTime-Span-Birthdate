@@ -1,6 +1,6 @@
 use inc::Module::Install;
-name 'DateTime-Span-Birth';
-all_from 'lib/DateTime/Span/Birth.pm';
+name 'DateTime-Span-Birthdate';
+all_from 'lib/DateTime/Span/Birthdate.pm';
 
 requires 'DateTime';
 requires 'DateTime::Span';

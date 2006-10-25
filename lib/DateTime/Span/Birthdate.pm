@@ -1,8 +1,8 @@
-package DateTime::Span::Birth;
+package DateTime::Span::Birthdate;
 
 use strict;
 use base qw( DateTime::Span );
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Carp;
 use DateTime;
@@ -20,7 +20,7 @@ sub new {
     } elsif ($p{age}) {
         @dates = $class->_from_age($p{age}, $p{on});
     } else {
-        croak "DateTime::Span::Birth->new() requires from, to or age parameter";
+        croak "DateTime::Span::Birthdate->new() requires from, to or age parameter";
     }
 
     return $class->from_datetimes( start => $dates[0], end => $dates[1] );
@@ -51,24 +51,24 @@ __END__
 
 =head1 NAME
 
-DateTime::Span::Birth - Date span of birthdays for an age
+DateTime::Span::Birthdate - Date span of birthdays for an age
 
 =head1 SYNOPSIS
 
-  use DateTime::Span::Birth;
+  use DateTime::Span::Birthdate;
 
   # birthday span for people who are 28 years old today
-  my $span = DateTime::Span::Birth->new(age => 28);
+  my $span = DateTime::Span::Birthdate->new(age => 28);
 
   # birthday span for 20 years old in $dt
-  my $span = DateTime::Span::Birth->new(age => 28, on => $dt);
+  my $span = DateTime::Span::Birthdate->new(age => 28, on => $dt);
 
   # birthday span for teenagers
-  my $span = DateTime::Span::Birth->new(from => 13, to => 19);
+  my $span = DateTime::Span::Birthdate->new(from => 13, to => 19);
 
 =head1 DESCRIPTION
 
-DateTime::Span::Birth is a port of Date::Range::Birth module and works
+DateTime::Span::Birthdate is a port of Date::Range::Birth module and works
 with DateTime::Span object. This module allows you to say "who is now
 28 years old, based on their birthday dates?"
 
@@ -87,6 +87,6 @@ it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-L<DateTime::Span>, L<Date::Range::Birth>
+L<DateTime::Span>, L<Date::Range::Birthdate>
 
 =cut
