@@ -87,6 +87,6 @@ it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-L<DateTime::Span>, L<Date::Range::Birthdate>
+L<DateTime::Span>, L<Date::Range::Birth>
 
 =cut
